@@ -117,4 +117,3 @@ If you use this repository in your research, please cite:
   publisher={Elsevier}
 }
 ```
-# ethical-fabrication

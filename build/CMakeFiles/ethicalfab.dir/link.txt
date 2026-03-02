@@ -1,0 +1,1 @@
+/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/ethicalfab.dir/main.cpp.o -o "/Users/johnbraswell/Desktop/unethical printing/ethicalfab"  -Wl,-rpath,/Users/johnbraswell/miniconda3/envs/ethicalfab/lib /Users/johnbraswell/miniconda3/envs/ethicalfab/lib/libpython3.12.dylib

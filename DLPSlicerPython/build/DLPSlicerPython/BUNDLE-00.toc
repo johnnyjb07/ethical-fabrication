@@ -1,0 +1,3 @@
+([('DLPSlicerPython',
+   '/Users/johnbraswell/Downloads/DLPSlicerPython/dist/DLPSlicerPython',
+   'EXECUTABLE')],)
