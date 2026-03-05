@@ -1,3 +1,0 @@
-/Users/johnbraswell/Desktop/unethical printing/build/CMakeFiles/ethicalfab.dir
-/Users/johnbraswell/Desktop/unethical printing/build/CMakeFiles/edit_cache.dir
-/Users/johnbraswell/Desktop/unethical printing/build/CMakeFiles/rebuild_cache.dir
