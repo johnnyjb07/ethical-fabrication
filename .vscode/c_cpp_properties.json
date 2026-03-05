@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "${default}",
+                "/Users/johnbraswell/miniconda3/envs/ethicalfab/lib/python3.12/site-packages/pybind11/include",
+                "/Users/johnbraswell/miniconda3/envs/ethicalfab/include/python3.12"
+            ],
+            "browse": {
+                "path": [
+                    "${workspaceFolder}/**",
+                    "/Users/johnbraswell/miniconda3/envs/ethicalfab/lib/python3.12/site-packages/pybind11/include"
+                ]
+            },
+            "defines": [],
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c17",
+            "cppStandard": "c++14",
+            "intelliSenseMode": "macos-clang-arm64"
+        }
+    ],
+    "version": 4
+
+}

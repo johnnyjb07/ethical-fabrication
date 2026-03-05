@@ -1,9 +1,8 @@
-#include "prediction.hpp"
+#include "cpp_files/prediction.hpp"
 #include <pybind11/embed.h>
 #include <iostream>
 
 namespace py = pybind11;
-
 // Global guard for the interpreter - it must stay alive for the whole program
 static py::scoped_interpreter guard{}; 
 
