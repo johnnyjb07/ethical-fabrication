@@ -4,6 +4,7 @@ import glob
 from PIL import Image
 import numpy as np
 import pickle
+import shutil
 from collections import Counter
 
 import torch
@@ -21,18 +22,20 @@ from opacus.utils.batch_memory_manager import BatchMemoryManager
 import warnings
 warnings.filterwarnings('ignore')
 
-from util import testdata_generate, train, cnnlstm, cnn3d, DPtrain
+from util import testdata_generate, train, cnnlstm, cnn3d, DPtrain, slicer
 
 device = torch.device('mps' if torch.backends.mps.is_available() else 'cpu')
-batch_size = 1
 
-############################################################################################################################################################
-path_validate = "test_split/FathersDay/FathersDayR0P0Y0_0"
-############################################################################################################################################################
+item = "Glock project V1 (Updated Draft).stl"
+path_validate = "temp"
+
+os.mkdir(path_validate)
+slicer.slice(item, path_validate)
+
 test_dataset = testdata_generate.VideoFrameDataset(path_validate, 1)
 test_loader = DataLoader(test_dataset)
 
-with open('save/cnnlstm_e5_b8ed7038fcc611f09084bab6975ba98b.pkl', 'rb') as f:
+with open('models/save/cnnlstm_e5_b8ed7038fcc611f09084bab6975ba98b.pkl', 'rb') as f:
     model = pickle.load(f)
 model.to(device)
 model_name = "CNNLSTM"
@@ -69,6 +72,8 @@ def predict(model, loader):
 
 # Run the prediction
 output, confidence_tensors = predict(model, test_loader)
+
+shutil.rmtree(path_validate)
 
 # Convert GPU tensors to standard Python values
 predicted_indices = [p.item() for p in output]
