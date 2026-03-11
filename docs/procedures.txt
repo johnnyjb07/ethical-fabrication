@@ -1,0 +1,4 @@
+Procedures
+1. Download the classification models from Minsung's conference paper from [INSERT LINK] as a zip file.
+2. Unzip the download and run the “changing_file_structure.ipynb” file from the folder.
+3. 
